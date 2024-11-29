@@ -1,7 +1,7 @@
-import 'package:gymtracker_ui/HomeScreen.dart';
-import 'package:gymtracker_ui/ProfileScreen.dart';
-import 'package:gymtracker_ui/WorkoutScreen.dart';
 import 'package:flutter/material.dart';
+import 'screens/HomeScreen.dart';
+import 'screens/ProfileScreen.dart';
+import 'screens/WorkoutScreen.dart';
 
 void main() {
   runApp(const GymApp());
@@ -11,7 +11,6 @@ class GymApp extends StatefulWidget {
   const GymApp({super.key});
 
   @override
-  // ignore: library_private_types_in_public_api
   _GymAppState createState() => _GymAppState();
 }
 
@@ -29,10 +28,10 @@ class _GymAppState extends State<GymApp> {
       title: 'Gym App',
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.grey[850], // Dark background
-        textTheme: const TextTheme(
-          bodyLarge: TextStyle(color: Colors.white, fontSize: 18),
-          bodyMedium: TextStyle(color: Colors.white70, fontSize: 16),
-          titleLarge: TextStyle(color: Colors.red, fontSize: 24, fontWeight: FontWeight.bold),
+        textTheme: TextTheme(
+          bodyLarge: const TextStyle(color: Colors.white, fontSize: 18),
+          bodyMedium: const TextStyle(color: Colors.white70, fontSize: 16),
+          titleLarge: const TextStyle(color: Colors.red, fontSize: 24, fontWeight: FontWeight.bold),
         ),
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.black,
@@ -42,7 +41,7 @@ class _GymAppState extends State<GymApp> {
             color: Colors.white,
           ),
         ),
-        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+        bottomNavigationBarTheme: BottomNavigationBarThemeData(
           backgroundColor: Colors.black,
           selectedItemColor: Colors.red,
           unselectedItemColor: Colors.white60,
